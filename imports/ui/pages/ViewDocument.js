@@ -29,6 +29,10 @@ const ViewDocument = ({ doc }) => (
       </ButtonToolbar>
     </div>
     { doc.body }
+    <br/><br/>
+    <b>Created:</b> { doc.createdAt.toLocaleString() }
+    <br/>
+    <b>Modified:</b> { doc.modifiedAt.toLocaleString() }
   </div>
 );
 

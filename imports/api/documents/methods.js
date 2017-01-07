@@ -11,6 +11,13 @@ export const upsertDocument = new ValidatedMethod({
     body: { type: String, optional: true },
   }).validator(),
   run(document) {
+    if (document._id) {
+      document.modifiedAt = new Date();
+    } else {
+      document.createdAt = new Date();
+      document.modifiedAt = document.createdAt;
+      document.ownedBy = Meteor.user()._id;
+    }
     return Documents.upsert({ _id: document._id }, { $set: document });
   },
 });

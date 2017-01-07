@@ -26,6 +26,20 @@ Documents.schema = new SimpleSchema({
     type: String,
     label: 'The body of the document.',
   },
+  createdAt: {
+    type: Date,
+    label: 'Date the document was created.',
+    optional: true,
+  },
+  modifiedAt: {
+    type: Date,
+    label: 'Date the document was modified.',
+  },
+  ownedBy: {
+    type: String,
+    label: 'User who created the document.',
+    optional: true,
+  },
 });
 
 Documents.attachSchema(Documents.schema);
@@ -33,4 +47,7 @@ Documents.attachSchema(Documents.schema);
 Factory.define('document', Documents, {
   title: () => 'Factory Title',
   body: () => 'Factory Body',
+  createdAt: () => 'Factory Create Date',
+  modifiedAt: () => 'Factory Modify Date',
+  ownedBy: () => 'Factory User Created',
 });

@@ -15,3 +15,11 @@ A starting point for Meteor apps.
 </table>
 
 [Read the Documentation](http://themeteorchef.com/base)
+
+# Extend Collection
+
+This extension to [Meteor Base](http://themeteorchef.com/base) adds an ownerId field to the Documents collection and restricts document access to the owner. It also adds fields to the document to track create & modify date.
+
+## Screenshot
+
+![CreatedAt Image](https://github.com/rgstephens/base/blob/extendDoc/screenshots/Created.png)
