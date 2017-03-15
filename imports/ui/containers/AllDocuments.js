@@ -14,7 +14,7 @@ const composer = (params, onData) => {
       const x2 = x;
       if (userobject) {
         // console.log('userobject', userobject);
-        x2.profile = userobject.profile;
+        x2.userobject = userobject;
       }
       return x2;
     });

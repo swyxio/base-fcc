@@ -4,7 +4,21 @@ import Documents from '../documents';
 
 const _ = require('lodash');
 
-Meteor.publish('documents.list', function docPub() { return Documents.find({ownedBy: this.userId}) });
+// Meteor.publish('documents.list', function docPub() { return Documents.find({ownedBy: this.userId}) });
+Meteor.publish('documents.list', function docPub(_id) {
+  check(_id, String);
+  // console.log('doc.list', _id);
+  // return Documents.find({ ownedBy: _id });
+  const documentCursor = Documents.find({ ownedBy: _id });
+  const profileCursor = Meteor.users.find(
+    {
+      _id,
+    },
+    {
+      fields: { profile: 1 },
+    });
+  return [documentCursor, profileCursor];
+});
 
 // just handover raw data and modify clientside - SO way
 Meteor.publish('documents.listAll', function() {
@@ -21,6 +35,12 @@ Meteor.publish('documents.listAll', function() {
       fields: { profile: 1 },
     });
   return [documentCursor, profileCursor];
+});
+
+
+Meteor.publish('documents.view', function docPub(_id) {
+  check(_id, String);
+  return Documents.find({ _id, ownedBy: this.userId });
 });
 
 // // try to modify inside here - meteorchef way
@@ -53,9 +73,3 @@ Meteor.publish('documents.listAll', function() {
 //    console.log('DocsWithUserObject',DocsWithUserObject); 
 //   return DocsWithUserObject;
 // })
-
-Meteor.publish('documents.view', function docPub(_id) {
-  check(_id, String);
-  return Documents.find({ _id, ownedBy: this.userId });
-});
-

@@ -1,5 +1,5 @@
 # Base + FCC
-A starting point for building FreeCodeCamp projects with Meteor. Forked from [gstephen's MeteorChef/Base Restricted Access Branch at v4.10.0](https://github.com/rgstephens/base/tree/extendDoc)
+A starting point for building FreeCodeCamp projects with Meteor. Because Meteor is awesome and is a perfect fit for FCC-size projects. Forked from [gstephen's MeteorChef/Base Restricted Access Branch at v4.10.0](https://github.com/rgstephens/base/tree/extendDoc)
 
 <table>
   <tbody>
@@ -27,6 +27,16 @@ This extension to [Meteor Base](http://themeteorchef.com/base) adds an ownerId f
 - Twitter login
 - Unauthenticated view of all documents (without Editing ability although the API may be hackable)
 - My Documents page
+
+# I'm New To Meteor, How To Get This Running On Local?
+
+borrowing heavily from <https://themeteorchef.com/base/getting-started> (go ahead and read the whole thing if you have time):
+
+0. open up your terminal and go to your favorite webdev terminal
+1. `git clone https://github.com/sw-yx/base-fcc.git base-fcc` (replace "base-fcc" with whatever name you want)
+2. `meteor npm install`
+3. `meteor npm start`
+4. once the app has compiled, open `localhost:3000` in your browser
 
 # Deploy to Heroku
 
