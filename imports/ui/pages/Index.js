@@ -17,6 +17,7 @@ const Index = () => (
           <li>My Documents page</li>
         </ul>
       </p>
+      <p>This code is published on github at <a href="https://github.com/sw-yx/base-fcc" target="_blank">https://github.com/sw-yx/base-fcc</a> and a sample is hosted on heroku at <a href="https://base-fcc.herokuapp.com/" target="_blank">https://base-fcc.herokuapp.com/</a></p>
     </Jumbotron>
 
     <div className="Documents">

@@ -16,6 +16,8 @@ A starting point for building FreeCodeCamp projects with Meteor. Forked from [gs
 
 [Read the Documentation](http://themeteorchef.com/base)
 
+This code is published on github at <https://github.com/sw-yx/base-fcc> and a sample is hosted on heroku at <https://base-fcc.herokuapp.com/>
+
 # Features From gstephen's Branch
 
 This extension to [Meteor Base](http://themeteorchef.com/base) adds an ownerId field to the Documents collection and restricts document access to the owner. It also adds fields to the document to track create & modify date.
