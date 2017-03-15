@@ -25,3 +25,7 @@ This extension to [Meteor Base](http://themeteorchef.com/base) adds an ownerId f
 - Twitter login
 - Unauthenticated view of all documents (without Editing ability although the API may be hackable)
 - My Documents page
+
+# Deploy to Heroku
+
+Just check this out :) <https://medium.com/@leonardykris/how-to-run-a-meteor-js-application-on-heroku-in-10-steps-7aceb12de234#.nmyq8xpf7>
