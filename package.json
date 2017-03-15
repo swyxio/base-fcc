@@ -1,6 +1,6 @@
 {
   "name": "application-name",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Application description.",
   "scripts": {
     "start": "meteor --settings settings-development.json",
