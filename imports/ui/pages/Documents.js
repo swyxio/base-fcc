@@ -7,7 +7,7 @@ const Documents = () => (
     <Row>
       <Col xs={ 12 }>
         <div className="page-header clearfix">
-          <h4 className="pull-left">Documents</h4>
+          <h4 className="pull-left">My Documents</h4>
           <Button
             bsStyle="success"
             className="pull-right"

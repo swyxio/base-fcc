@@ -1,5 +1,5 @@
-# The Meteor Chef - Base
-A starting point for Meteor apps.
+# Base + FCC
+A starting point for building FreeCodeCamp projects with Meteor. Forked from [gstephen's MeteorChef/Base Restricted Access Branch at v4.10.0](https://github.com/rgstephens/base/tree/extendDoc)
 
 <table>
   <tbody>
@@ -16,10 +16,12 @@ A starting point for Meteor apps.
 
 [Read the Documentation](http://themeteorchef.com/base)
 
-# Extend Collection
+# Features From gstephen's Branch
 
 This extension to [Meteor Base](http://themeteorchef.com/base) adds an ownerId field to the Documents collection and restricts document access to the owner. It also adds fields to the document to track create & modify date.
 
-## Screenshot
+# Features Added in This Fork
 
-![CreatedAt Image](https://github.com/rgstephens/base/blob/extendDoc/screenshots/Created.png)
+- Twitter login
+- Unauthenticated view of all documents (without Editing ability although the API may be hackable)
+- My Documents page

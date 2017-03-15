@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import PublicNavigation from './PublicNavigation.js';
 import AuthenticatedNavigation from './AuthenticatedNavigation.js';
 
@@ -10,7 +10,7 @@ const AppNavigation = ({ hasUser }) => (
   <Navbar>
     <Navbar.Header>
       <Navbar.Brand>
-        <Link to="/">Application Name</Link>
+        Base+FCC
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>

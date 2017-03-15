@@ -3,13 +3,18 @@ import { browserHistory } from 'react-router';
 import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { Meteor } from 'meteor/meteor';
+import { Bert } from 'meteor/themeteorchef:bert';
 
-const handleLogout = () => Meteor.logout(() => browserHistory.push('/login'));
+const handleLogout = () => {
+  Meteor.logout(() => browserHistory.push('/'));
+  Bert.alert('Logged out', 'success');
+};
 
 const userName = () => {
   const user = Meteor.user();
-  const name = user && user.profile ? user.profile.name : '';
-  return user ? `${name.first} ${name.last}` : '';
+  let name = user && user.profile ? user.profile.name : '';
+  name = Object.prototype.hasOwnProperty.call(name, 'first') ? `${name.first} ${name.last}` : name;
+  return user ? name : '';
 };
 
 const AuthenticatedNavigation = () => (
@@ -19,7 +24,7 @@ const AuthenticatedNavigation = () => (
         <NavItem eventKey={ 1 } href="/">Index</NavItem>
       </IndexLinkContainer>
       <LinkContainer to="/documents">
-        <NavItem eventKey={ 2 } href="/documents">Documents</NavItem>
+        <NavItem eventKey={ 2 } href="/documents">My Documents</NavItem>
       </LinkContainer>
     </Nav>
     <Nav pullRight>

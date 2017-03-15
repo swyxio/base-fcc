@@ -4,7 +4,7 @@ import { ListGroup, ListGroupItem, Alert } from 'react-bootstrap';
 const DocumentsList = ({ documents }) => (
   documents.length > 0 ? <ListGroup className="DocumentsList">
     {documents.map(({ _id, title, profile }) => (
-      <ListGroupItem key={ _id } href={`/documents/${_id}`}>{ title } 
+      <ListGroupItem key={ _id } >{ title } 
         <i> { Object.prototype.hasOwnProperty.call(profile.name, 'first') ? `by ${profile.name.first} ${profile.name.last}` : `by ${profile.name}` } </i>
       </ListGroupItem>
     ))}
