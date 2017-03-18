@@ -39,10 +39,12 @@ borrowing heavily from <https://themeteorchef.com/base/getting-started> (go ahea
 
 0. open up your terminal and go to your favorite webdev terminal
 1. `git clone https://github.com/sw-yx/base-fcc.git base-fcc` (replace "base-fcc" with whatever name you want)
-2. `meteor npm install`
+2. `cd base-fcc` and then `meteor npm install`
 3. `meteor npm start`
 4. once the app has compiled, open `localhost:3000` in your browser
 
 # Tips for Deploying to Heroku
 
-Just check this out :) <https://medium.com/@leonardykris/how-to-run-a-meteor-js-application-on-heroku-in-10-steps-7aceb12de234#.nmyq8xpf7> except note that the buildpack he recommends is old and you should use <https://github.com/AdmitHub/meteor-buildpack-horse>
+Just check this out :) <https://medium.com/@leonardykris/how-to-run-a-meteor-js-application-on-heroku-in-10-steps-7aceb12de234#.nmyq8xpf7> 
+except note that the buildpack he recommends is old and you should use <https://github.com/AdmitHub/meteor-buildpack-horse>
+also you should grep a slightly different mongodb uri `heroku config | grep MONGODB_URI`
