@@ -17,7 +17,7 @@ const handleRemove = (_id) => {
   }
 };
 
-const ViewDocument = ({ doc }) => (
+const ViewDocument = ({ doc }) => !doc ? <div>This document either doesn't exist or you don't have permission to see it</div> : (
   <div className="ViewDocument">
     <div className="page-header clearfix">
       <h4 className="pull-left">{ doc.title }</h4>
@@ -36,8 +36,8 @@ const ViewDocument = ({ doc }) => (
   </div>
 );
 
-ViewDocument.propTypes = {
-  doc: React.PropTypes.object.isRequired,
-};
+// ViewDocument.propTypes = {
+//   doc: React.PropTypes.object.isRequired, // commented out to allow null value for doc
+// };
 
 export default ViewDocument;
