@@ -1,3 +1,5 @@
+# IMPORTANT: Meteorchef deprecated Base in June 2017 and so this should also be deprecated. Instead please go directly to their new project, [Pup](https://github.com/cleverbeagle/pup), run by their new organization Clever Beagle. This is a GOOD thing.
+
 # Base + FCC
 A starting point for building FreeCodeCamp projects with Meteor. Because Meteor is awesome and is a perfect fit for FCC-size projects. Forked from [gstephen's MeteorChef/Base Restricted Access Branch at v4.10.0](https://github.com/rgstephens/base/tree/extendDoc)
 
